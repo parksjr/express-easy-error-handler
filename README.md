@@ -2,7 +2,7 @@
 Easy error model and handling middleware to use with express web apps.
 ## Install as a dependency in your express project
 ```sh
-npm i -S express-error-handler
+npm i -S express-easy-error-handler
 ```
 ## Using
 Using middleware and HttpError model in your routes like so:
