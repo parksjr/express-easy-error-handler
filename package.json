@@ -5,14 +5,14 @@
   "main":"lib/index.js",
   "scripts": {
     "start": "npm run test",
-    "lint": "esw webpack.config.* src buildScripts --color",
+    "lint": "esw src --color",
     "lint:watch": "npm run lint -- --watch",
     "security-check": "nsp check",
     "test": "mocha --reporter progress src/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch",
     "clean-lib": "rimraf ./lib && mkdir lib",
     "prebuild": "npm-run-all clean-lib security-check test lint",
-    "build": "babel -d ./lib ./src"
+    "build": "babel -d ./lib ./src --ignore \"**/*.test.js\""
   },
   "keywords":[],
   "author": "Michael Parks",
