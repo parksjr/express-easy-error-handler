@@ -18,9 +18,9 @@
   "author": "Michael Parks",
   "license": "WTFPL",
   "bugs": {
-    "url": "https://github.com/parksjr/express-error-handler/issues"
+    "url": "https://github.com/parksjr/express-easy-error-handler/issues"
   },
-  "homepage": "https://github.com/parksjr/express-error-handler",
+  "homepage": "https://github.com/parksjr/express-easy-error-handler",
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "6.16.0",
