@@ -1,5 +1,5 @@
 import HttpError from '../models/error.http';
-const node_env = process.env.NODE_ENV.toUpperCase();
+const node_env = process.env.NODE_ENV;
 
 export function ErrorHandler(err, req, res, next) {
   if (!err) {
@@ -9,7 +9,7 @@ export function ErrorHandler(err, req, res, next) {
   const error = {
     message: err.message || 'Internal Server Error.',
   };
-  if (node_env !== 'PROD') {
+  if (node_env !== 'prod') {
     error.stack = err.stack;
   }
 
