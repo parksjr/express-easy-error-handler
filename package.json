@@ -1,8 +1,8 @@
 {
-  "name": "express-error-handler",
+  "name": "express-easy-error-handler",
   "version": "1.0.0",
   "description": "Easy error model and handling middleware to use with express web apps.",
-  "main":"lib/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "npm run test",
     "lint": "esw src --color",
@@ -14,26 +14,14 @@
     "prebuild": "npm-run-all clean-lib security-check test lint",
     "build": "babel -d ./lib ./src --ignore \"**/*.test.js\""
   },
-  "keywords":[],
+  "keywords": [],
   "author": "Michael Parks",
   "license": "WTFPL",
   "bugs": {
     "url": "https://github.com/parksjr/express-error-handler/issues"
   },
-  "homepage":"https://github.com/parksjr/express-error-handler",
-  "dependencies": {
-    "bootstrap": "^4.0.0",
-    "cookie-parser": "^1.4.3",
-    "font-awesome": "^4.7.0",
-    "jquery": "^3.3.1",
-    "jquery.easing": "^1.4.1",
-    "mongodb": "^3.1.0-beta4",
-    "nedb": "^1.8.0",
-    "popper.js": "^1.14.1",
-    "simple-line-icons": "^2.4.1",
-    "waypoints": "^4.0.1",
-    "whatwg-fetch": "1.0.0"
-  },
+  "homepage": "https://github.com/parksjr/express-error-handler",
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "6.16.0",
     "babel-core": "6.17.0",
