@@ -1,7 +1,8 @@
 {
   "name": "express-error-handler",
   "version": "1.0.0",
-  "description": "error handling middleware to use with express web apps",
+  "description": "Easy error model and handling middleware to use with express web apps.",
+  "main":"lib/index.js",
   "scripts": {
     "start": "npm run test",
     "lint": "esw webpack.config.* src buildScripts --color",
@@ -13,8 +14,13 @@
     "prebuild": "npm-run-all clean-lib security-check test lint",
     "build": "babel -d ./lib ./src"
   },
+  "keywords":[],
   "author": "Michael Parks",
   "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/parksjr/express-error-handler/issues"
+  },
+  "homepage":"https://github.com/parksjr/express-error-handler",
   "dependencies": {
     "bootstrap": "^4.0.0",
     "cookie-parser": "^1.4.3",

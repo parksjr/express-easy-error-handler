@@ -1,7 +1,7 @@
 import HttpError from '../models/error.http';
 const node_env = process.env.NODE_ENV.toUpperCase();
 
-export function errorHandler(err, req, res, next) {
+export function ErrorHandler(err, req, res, next) {
   if (!err) {
     err = HttpError.notFoundError();
   }
@@ -34,9 +34,4 @@ export function errorHandler(err, req, res, next) {
       title: 'error'
     });
   }
-}
-
-export function notFoundHandler(req, res, next) {
-  var err = HttpError.notFoundError();
-  next(err);
 }
