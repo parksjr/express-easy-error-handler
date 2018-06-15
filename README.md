@@ -1,4 +1,4 @@
-# Express Error Handler
+# Express Easy Error Handler
 Easy error model and handling middleware to use with express web apps.
 ## Install as a dependency in your express project
 ```sh
