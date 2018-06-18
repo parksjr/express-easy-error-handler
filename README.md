@@ -30,4 +30,4 @@ router.use(NotFoundHandler, ErrorHandler);
 ```
 
 ## Contributing
-clone the repo, source code is in the src directory, make your changes, test and build. `npm run build` will lint, test, and security check before transpiling into the lib directory.
+clone the repo, ES6 source code is in the src directory, make your changes, test and build. `npm run build` will lint, test, and security check before transpiling into the lib directory.
