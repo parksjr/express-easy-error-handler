@@ -1,7 +1,7 @@
 import HttpError from '../models/error.http';
 const node_env = process.env.NODE_ENV;
 
-export function ErrorHandler(err, req, res, next) {
+export function ErrorHandler(err, req, res, next) { //  eslint-disable-line
   if (!err) {
     err = HttpError.notFoundError();
   }
@@ -24,14 +24,13 @@ export function ErrorHandler(err, req, res, next) {
   }
   err.statusCode = err.statusCode || 500;
 
-  if (typeof next === 'function') {
-    return next(err);
-  }
-  else {
-    return res.status(err.statusCode).json({
-      message: error.message,
-      error: error,
-      title: 'error'
-    });
-  }
+  //todo: come up with a way to customize the response
+  return res.status(err.statusCode).json({
+    message: error.message,
+    error: error,
+    title: 'error'
+  });
+}
+export function NotFoundHandler(req, res, next) {
+  next(HttpError.notFoundError());
 }

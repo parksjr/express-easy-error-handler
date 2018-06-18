@@ -10,7 +10,7 @@ Using middleware and HttpError model in your routes like so:
 #### ES6
 ```javascript
 import {Router} from 'express';
-import HttpError, {ErrorHandler} from 'express-error-handler';
+import HttpError, {ErrorHandler, NotFoundHandler} from 'express-error-handler';
 
 const router = new Router();
 
@@ -26,15 +26,7 @@ router.get('/error', (req, res, next) {
 //
 //  place error handlers after all routes, 
 //  will send json response of error object by default
-router.use(ErrorHandler);
-
-//
-//  or, override the response with your own
-router.use((err, req, res) => {
-  ErrorHandler(err, req, res, () => {
-    res.send(err.message);
-  });
-});
+router.use(NotFoundHandler, ErrorHandler);
 ```
 
 ## Contributing

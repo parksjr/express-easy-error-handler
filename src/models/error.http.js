@@ -1,12 +1,11 @@
-class HttpError extends Error {
-  constructor(message, statusCode, innerError, environment) {
+class HttpError {
+  constructor(message, statusCode, innerError) {
     if (!message) {
       throw new Error('HttpError constructor expects at least a message as an argument. Please refer to documentation at http://somewhere.out.there');
     }
-    super(message);
+    this.message = (message);
     this.statusCode = statusCode || 500;
     this.innerError = innerError || {};
-    this.environment = environment || null;
   }
   static notFoundError(msg) {
     msg = msg || '404 Not Found.';
