@@ -2,4 +2,5 @@ import HttpError from './models/error.http';
 import {ErrorHandler, NotFoundHandler} from './middleware/error-handler';
 
 export default HttpError;
-export {ErrorHandler, NotFoundHandler};
+export {ErrorHandler};
+export {NotFoundHandler};
