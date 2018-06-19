@@ -12,7 +12,9 @@
     "test:watch": "npm run test -- --watch",
     "clean-lib": "rimraf ./lib && mkdir lib",
     "prebuild": "npm-run-all clean-lib security-check test lint",
-    "build": "babel -d ./lib ./src --ignore \"**/*.test.js\""
+    "build": "babel -d ./lib ./src --ignore \"**/*.test.js\"",
+    "prepublish":"npm run build",
+    "postpublish":"echo \"Publish complete.\""
   },
   "keywords": [],
   "author": "Michael Parks",
